@@ -1,19 +1,37 @@
-const form = document.querySelector('#form');
-const submitButton = document.querySelector('#submit');
-const scriptURL =
-  'oooo.com';
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("contact-form");
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const messageInput = document.getElementById("message");
 
-form.addEventListener('submit', (e) => {
-  submitButton.disabled = true;
-  e.preventDefault();
-  let requestBody = new FormData(form);
-  fetch(scriptURL, { method: 'POST', body: requestBody })
-    .then((response) => {
-      alert('Success!', response);
-      submitButton.disabled = false;
-    })
-    .catch((error) => {
-      alert('Error!', error.message);
-      submitButton.disabled = false;
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); 
+
+        let valid = true;
+
+        if (nameInput.value.trim() === "") {
+            alert("Name is required.");
+            valid = false;
+        }
+
+        if (emailInput.value.trim() === "" || !validateEmail(emailInput.value)) {
+            alert("Please enter a valid email address.");
+            valid = false;
+        }
+
+        if (messageInput.value.trim() === "") {
+            alert("Message is required.");
+            valid = false;
+        }
+
+        if (valid) {
+            alert("Form submitted successfully!");
+            form.reset(); // Clear the form
+        }
     });
+
+    function validateEmail(email) {
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        return emailPattern.test(email);
+    }
 });
