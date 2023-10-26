@@ -54,6 +54,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ---
 
 Thank you for visiting my personal website! If you have any questions or would like to get in touch, please use the contact form on the website.
-# RustyDL.github.io
-# RustyDL.github.io
-# RustyDL.github.io
