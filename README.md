@@ -17,6 +17,8 @@ Welcome to my personal website! This site serves as a platform to showcase my ab
 
 3. **Portfolio Page:** A portfolio page showcasing past project, Digital Art, and work.
 
+4. **Contact Page:** Contact page for visitors to visit and submit questions
+
 ## Technologies Used
 
 - HTML

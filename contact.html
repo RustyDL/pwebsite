@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -11,27 +12,41 @@
         <h1>Jason Garcia</h1>
         <p>Web Developer</p>
     </header>
-
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-
-    <section class="home">
-        <h2>About me</h2>
-        <hr>
-        <h3>Hiking</h2>
-            <p>.
+    <main>
+    <section class="aboutmain">
+        <section class="about">
+            <h2>Got a Question?</h2>
+            <p>I'm here to help! Feel free to reach out to me with any inquiries or concerns. I am eager to assist you
             </p>
+        </section>
+        <section class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="./form.html" method="get">
+                <label for="name">Name:</label>
+                <input type="name" id="name" name="name" required>
 
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <input type="submit" value="Submit">
+        </section>
     </section>
+</main>
     <footer>
         <p>&copy; 2023 Jason Garcia</p>
     </footer>
-    <script src="javascript.js"></script>
 </body>
+
 
 </html>
